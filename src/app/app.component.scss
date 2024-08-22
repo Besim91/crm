@@ -1,0 +1,59 @@
+// header
+.menu-icon {
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+//   sidenav
+.mat-drawer-container {
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidenav {
+  width: 300px;
+}
+
+.logoContainer {
+  border-bottom: 1px solid rgba(266, 266, 266, 0.5);
+  padding: 20px;
+}
+
+.ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(266, 266, 266, 0.5);
+    }
+
+    mat-icon {
+      margin-right: 16px;
+    }
+  }
+}
+
+.routerContainer {
+  padding-left: 56px;
+  padding-right: 56px;
+  padding-top: 16px;
+}
