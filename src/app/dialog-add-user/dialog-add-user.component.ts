@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SharedToolbarComponent } from './../shared-toolbar/shared-toolbar.component';
 import { User } from './../../models/user.class';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, doc } from '@angular/fire/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -21,12 +21,11 @@ export class DialogAddUserComponent {
   saveUser() {
     this.loading = true;
     this.user.birthDate = this.birthDate.getTime();
-    console.log('user', this.user);
 
-    const docRef = collection(this.firestore, 'users'); // Create the colletion 'users' in firestore
-    addDoc(docRef, this.user.toJSON()).then((result: any) => {
-      console.log(result);
-      this.loading = false;
+    // const docRef = collection(this.firestore, 'users');
+
+    addDoc(collection(this.firestore, 'users'), this.user.toJSON()).then(() => {
+      this.loading = false; // Stoppt die Ladeanimation
       this.dialogRef.close();
     });
   }

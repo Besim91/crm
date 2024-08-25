@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -30,6 +32,9 @@ import { MatCardModule } from '@angular/material/card';
     MatProgressBarModule,
     CommonModule,
     MatCardModule,
+    RouterLink,
+    RouterOutlet,
+    MatMenuModule,
   ],
   exports: [
     MatToolbarModule,
@@ -46,6 +51,9 @@ import { MatCardModule } from '@angular/material/card';
     MatProgressBarModule,
     CommonModule,
     MatCardModule,
+    RouterLink,
+    RouterOutlet,
+    MatMenuModule,
   ],
 })
 export class SharedToolbarComponent {}

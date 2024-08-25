@@ -35,11 +35,46 @@ section {
 
 .user-table {
   width: 100%;
+  border-collapse: collapse;
 
   th {
     color: rgb(231, 175, 255);
     font-size: 14px;
     font-weight: bold;
     text-align: start;
+
+    &:first-child {
+      padding-left: 16px;
+    }
   }
+
+  td {
+    height: 48px;
+    cursor: pointer;
+
+    &:first-child {
+      padding-left: 16px;
+      cursor: unset;
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    &:hover {
+      background-color: #7b1fa2;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid white;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+mat-card-content {
+  padding-left: 0;
+  padding-right: 0;
 }
